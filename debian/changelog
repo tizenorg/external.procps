@@ -1,0 +1,25 @@
+procps (3.2.8-4slp2) unstable; urgency=low
+
+  * Add git tag
+  * Git: 165.213.180.234:/git/slp/unmodified/procps
+  * Tag: procps_3.2.8-4slp2
+
+ -- DongGi Jang <dg0402@dg0402-desktop>  Thu, 25 Nov 2010 12:09:47 +0900
+
+procps (3.2.8-3slp2) unstable; urgency=low
+
+  * case of un-modified open source package
+
+ -- DongGi Jang <dg0402@dg0402-desktop>  Thu, 25 Nov 2010 12:09:46 +0900
+
+procps (3.2.8-2slp2) unstable; urgency=low
+
+  * Change version policy
+
+ -- DongGi Jang <dg0402.jang@samsung.com>  Tue, 30 Mar 2010 14:52:50 +0900
+
+procps (3.2.8-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- DongGi Jang <dg0402.jang@samsung.com>  Thu, 21 Jan 2010 15:07:11 +0900

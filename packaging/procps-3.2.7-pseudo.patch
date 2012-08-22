@@ -1,6 +1,7 @@
---- procps-3.2.5/top.h.pseudo	2005-03-17 13:32:05.305659080 +0100
-+++ procps-3.2.5/top.h	2005-03-17 13:34:04.837487480 +0100
-@@ -149,8 +149,13 @@
+diff -up procps-3.2.7/top.h.p7 procps-3.2.7/top.h
+--- procps-3.2.7/top.h.p7	2006-06-25 08:41:48.000000000 +0200
++++ procps-3.2.7/top.h	2008-09-01 11:29:15.000000000 +0200
+@@ -149,8 +149,13 @@ do {                                    
     int _len = 1 + snprintf(_str, sizeof(_str), fmt, ## arg);   \
     if (Batch) _ptr = _str;                                   \
     else {                                                 \

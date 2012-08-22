@@ -1,16 +1,17 @@
---- procps-3.2.2/watch.c.misc	2004-07-10 14:58:26.000000000 -0400
-+++ procps-3.2.2/watch.c	2004-07-19 10:54:05.905274300 -0400
-@@ -24,6 +24,9 @@
- #include <unistd.h>
+diff -up procps-3.2.7/watch.c.p2 procps-3.2.7/watch.c
+--- procps-3.2.7/watch.c.p2	2006-06-17 11:18:38.000000000 +0200
++++ procps-3.2.7/watch.c	2008-09-01 10:46:17.000000000 +0200
+@@ -25,6 +25,9 @@
+ #include <termios.h>
  #include <locale.h>
  #include "proc/procps.h"
 +#include <sys/types.h>
 +#include <sys/stat.h>
 +#include <fcntl.h>
  
- static struct option longopts[] = {
- 	{"differences", optional_argument, 0, 'd'},
-@@ -93,6 +96,7 @@
+ #ifdef FORCE_8BIT
+ #undef isprint
+@@ -138,6 +141,7 @@ int
  main(int argc, char *argv[])
  {
  	int optc;
@@ -18,7 +19,7 @@
  	int option_differences = 0,
  	    option_differences_cumulative = 0,
  	    option_help = 0, option_version = 0;
-@@ -213,7 +217,13 @@
+@@ -260,7 +264,13 @@ main(int argc, char *argv[])
  			mvaddstr(0, width - tsl + 1, ts);
  			free(header);
  		}

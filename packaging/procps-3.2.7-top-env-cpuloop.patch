@@ -1,6 +1,7 @@
---- procps-3.2.7/top.c.kzak	2006-08-31 10:44:42.000000000 +0200
-+++ procps-3.2.7/top.c	2006-08-31 10:46:15.000000000 +0200
-@@ -121,6 +121,7 @@
+diff -up procps-3.2.7/top.c.p15 procps-3.2.7/top.c
+--- procps-3.2.7/top.c.p15	2008-09-01 11:37:51.000000000 +0200
++++ procps-3.2.7/top.c	2008-09-01 11:37:51.000000000 +0200
+@@ -121,6 +121,7 @@ static int No_ksyms = -1,       // set t
             Secure_mode = 0;     // set if some functionality restricted
  
  static int VIRT_vmsize = 0;	//use vm_size for VIRT 
@@ -8,7 +9,7 @@
  
          /* Some cap's stuff to reduce runtime calls --
             to accomodate 'Batch' mode, they begin life as empty strings */
-@@ -1679,6 +1680,8 @@
+@@ -1679,6 +1680,8 @@ static void before (char *me)
     
     if (( getenv("STATSIZE")) && ( atoi(getenv("STATSIZE")) == 1 )) 
  	   VIRT_vmsize = 1;
@@ -17,7 +18,7 @@
  }
  
  
-@@ -2978,6 +2981,7 @@
+@@ -2978,6 +2981,7 @@ static proc_t **summary_show (void)
  {
     static proc_t **p_table = NULL;
     static CPU_t  *smpcpu = NULL;
@@ -25,7 +26,7 @@
  
     // whoa first time, gotta' prime the pump...
     if (!p_table) {
-@@ -3025,6 +3029,28 @@
+@@ -3025,6 +3029,28 @@ static proc_t **summary_show (void)
  
        smpcpu = cpus_refresh(smpcpu);
  
@@ -54,7 +55,7 @@
        if (CHKw(Curwin, View_CPUSUM)) {
           // display just the 1st /proc/stat line
           summaryhlp(&smpcpu[Cpu_tot], "Cpu(s):");
-@@ -3050,6 +3076,8 @@
+@@ -3050,6 +3076,8 @@ static proc_t **summary_show (void)
     }
  
     SETw(Curwin, NEWFRAM_cwo);
@@ -63,9 +64,10 @@
     return p_table;
  }
  
---- procps-3.2.7/top.1.kzak	2006-08-31 10:44:42.000000000 +0200
-+++ procps-3.2.7/top.1	2006-08-31 10:44:42.000000000 +0200
-@@ -1183,6 +1183,13 @@
+diff -up procps-3.2.7/top.1.p15 procps-3.2.7/top.1
+--- procps-3.2.7/top.1.p15	2008-09-01 11:37:51.000000000 +0200
++++ procps-3.2.7/top.1	2008-09-01 11:37:51.000000000 +0200
+@@ -1183,6 +1183,13 @@ Then ponder this:
  Send bug reports to:
     Albert D\. Cahalan, <albert@users.sf.net>
  
