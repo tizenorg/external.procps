@@ -205,6 +205,10 @@ do
 	done;
 done
 
+# license
+mkdir -p %{buildroot}/usr/share/license
+cp COPYING %{buildroot}/usr/share/license/%{name}
+
 %clean
 rm -rf %{buildroot}
 
@@ -225,6 +229,8 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %{_mandir}/man1/*
 %attr(0644,root,root) %{_mandir}/man8/*
 %attr(0644,root,root) %{_mandir}/man5/*
+
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
