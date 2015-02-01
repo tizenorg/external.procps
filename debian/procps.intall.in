@@ -1,5 +1,0 @@
-@PREFIX@/bin/*
-@PREFIX@/etc/*
-@PREFIX@/libexec/*
-@PREFIX@/sbin/*
-@PREFIX@/share/*

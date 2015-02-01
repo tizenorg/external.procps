@@ -176,7 +176,7 @@ cp %SOURCE1 .
 
 %build
 cp %{SOURCE1001} .
-make SHARED=1 CFLAGS="$RPM_OPT_FLAGS" W_SHOWFROM=-DW_SHOWFROM lib64=%{_lib}
+make %{?_smp_mflags} SHARED=1 CFLAGS="$RPM_OPT_FLAGS" W_SHOWFROM=-DW_SHOWFROM lib64=%{_lib}
 
 %install
 rm -rf %{buildroot}
