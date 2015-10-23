@@ -1,14 +1,14 @@
-Summary:     System and process monitoring utilities
-Name:        procps
-Version:     3.2.8
-Release:     18
-License:     GPL-2.0+ and LGPL-2.0+
-Group:       Applications/System
-URL:         http://procps.sourceforge.net
-Source:       http://procps.sourceforge.net/procps-%{version}.tar.gz
-Source1:     FAQ
-Source1001:  %{name}.manifest
-Buildroot:   %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Summary: System and process monitoring utilities
+Name:    procps
+Version: 3.2.8
+Release: 18
+License: GPL-2.0+ and LGPL-2.0+
+Group:   Applications/System
+URL:     http://procps.sourceforge.net
+Source:  http://procps.sourceforge.net/procps-%{version}.tar.gz
+Source1: FAQ
+Source1001: %{name}.manifest
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
